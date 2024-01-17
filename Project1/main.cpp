@@ -101,7 +101,7 @@ bool randomize_test() {
 int main() {
 
     {
-        const size_t N = 1u << 10;
+        const size_t N = 1u << 30;
         std::vector<uint32_t> arr(N);
 
         std::size_t T_max = get_num_threads();
@@ -121,14 +121,14 @@ int main() {
             res[T - 1].efficiency = res[T - 1].speedup / T;
         }
 
-        std::cout << "Result,Time,Speedup,Efficiency(average_cpp_mtx)" << "\n";
+        std::cout << "Result,Time,Speedup,Efficiency(randomize_vector_par)" << "\n";
         for (int i = 0; i < res.size(); i++) {
             std::cout << res[i].result << "," << res[i].time << "," << res[i].speedup << "," << res[i].efficiency << "\n";
         }
     }
     
     {
-        const size_t N = 1u << 10;
+        const size_t N = 1u << 30;
         std::vector<uint32_t> arr(N);
 
         std::size_t T_max = get_num_threads();
@@ -148,7 +148,7 @@ int main() {
             res[T - 1].efficiency = res[T - 1].speedup / T;
         }
 
-        std::cout << "Result,Time,Speedup,Efficiency(average_cpp_mtx)" << "\n";
+        std::cout << "Result,Time,Speedup,Efficiency(randomize_vector)" << "\n";
         for (int i = 0; i < res.size(); i++) {
             std::cout << res[i].result << "," << res[i].time << "," << res[i].speedup << "," << res[i].efficiency << "\n";
         }
