@@ -101,7 +101,7 @@ bool randomize_test() {
 int main() {
 
     {
-        const size_t N = 1u << 30;
+        const size_t N = 1u << 3;
         std::vector<uint32_t> arr(N);
 
         std::size_t T_max = get_num_threads();
@@ -128,7 +128,7 @@ int main() {
     }
     
     {
-        const size_t N = 1u << 30;
+        const size_t N = 1u << 3;
         std::vector<uint32_t> arr(N);
 
         std::size_t T_max = get_num_threads();
